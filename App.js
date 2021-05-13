@@ -104,7 +104,11 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Press to invoke native module">
-            <TouchableOpacity onPress={onPress}> 
+            <TouchableOpacity onPress={()=>{
+              if(Platform.OS === 'android'){
+                onPress();
+              }
+            }}> 
 
             <Text style={styles.highlight}><Text>Current state is: {appStateVisible}</Text></Text>
             </TouchableOpacity>
