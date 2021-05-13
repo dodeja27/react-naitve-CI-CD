@@ -114,7 +114,7 @@ const App: () => Node = () => {
             </TouchableOpacity>
 
           </Section>
-
+            <Text>feature 2 added </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
