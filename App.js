@@ -106,7 +106,7 @@ const App: () => Node = () => {
           <Section title="Press to invoke native module">
             <TouchableOpacity onPress={()=>{
               if(Platform.OS === 'android'){
-                onPress();
+                onPress()
               }
             }}> 
 
