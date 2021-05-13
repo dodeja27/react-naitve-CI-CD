@@ -84,7 +84,7 @@ const App: () => Node = () => {
       nextAppState != "active"
     ) {
       if(Platform.OS === 'android'){
-        onPress();
+        // onPress();
       }
     }
 
@@ -106,11 +106,11 @@ const App: () => Node = () => {
           <Section title="Press to invoke native module">
             <TouchableOpacity onPress={()=>{
               if(Platform.OS === 'android'){
-                onPress()
+                // onPress()
               }
             }}> 
 
-            <Text style={styles.highlight}><Text>Current state is: {appStateVisible}</Text></Text>
+            <Text style={styles.highlight}><Text>Current App state is: {appStateVisible}</Text></Text>
             </TouchableOpacity>
 
           </Section>
