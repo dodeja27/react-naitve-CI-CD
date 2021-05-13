@@ -18,6 +18,7 @@ import {
   useColorScheme,
   NativeModules,
   View,
+  Platform,
   AppState
 } from 'react-native';
 
@@ -82,7 +83,9 @@ const App: () => Node = () => {
     if (
       nextAppState != "active"
     ) {
-      onPress();
+      if(Platform.OS === 'android'){
+        onPress();
+      }
     }
 
     appState.current = nextAppState;
